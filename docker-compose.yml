@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile-db
+      args:
+        SA_PASSWORD: ${SA_PASSWORD}   
+    env_file:
+      - .env
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+      SA_PASSWORD: "${SA_PASSWORD}"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+    networks:
+      - nlqs-net
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile-App
+    env_file:
+      - .env
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://+:8080"
+      ConnectionStrings__DefaultConnection: >
+        Server=db;
+        Database=${DB_NAME};
+        User Id=sa;
+        Password=${SA_PASSWORD};
+        TrustServerCertificate=True;
+      Gemini__ApiKey: "${GEMINI_API_KEY}"
+    ports:
+      - "80:8080"
+    depends_on:
+      - db
+    networks:
+      - nlqs-net
+
+volumes:
+  sqlserverdata:
+
+networks:
+  nlqs-net:
+    driver: bridge

@@ -1,0 +1,10 @@
+# Use the official ASP.NET Core 8.0 runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+
+WORKDIR /app
+
+# Copy the published application files
+COPY PublishedApp/ .
+
+# The entry point for your application
+ENTRYPOINT ["dotnet", "NLQS-CORE.dll"]
