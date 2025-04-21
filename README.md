@@ -60,10 +60,10 @@ Ensure you have the following installed on your machine:
 4.  Edit the following variables with your specific information:
     ```env
     # Name of your database (must match the database name you intend to create in init-db.sql)
-    DB_NAME=<YOUR_DATABASE_NAME>
+    DB_NAME=NLQS
 
     # SA password for your SQL Server instance
-    SA_PASSWORD=<YOUR_SECURE_SA_PASSWORD>
+    SA_PASSWORD=StrongPassword123456! 
 
     # Your Google Gemini gemini-1.5-flash API key
     GEMINI_API_KEY=<YOUR_GEMINI_API_KEY>
