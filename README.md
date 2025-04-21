@@ -105,11 +105,10 @@ The system will automatically parse and understand your schema, enabling more ac
 
 ---
 
-🧑‍💻 **Contact & Acknowledgements**
+## 🧑‍💻 Contact & Acknowledgements
 
 Designed & Developed by  
-[![LinkedIn - Govind Ambade](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/govind-ambade/) **Govind Ambade**
-
+[![LinkedIn - Govind Ambade](https://img.shields.io/badge/LinkedIn-Govind_Ambade-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/govind-ambade/)
 
 ---
 
