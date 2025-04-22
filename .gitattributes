@@ -1,8 +1,11 @@
-# Mark published files and binaries as linguist-generated
+# Exclude PublishedApp (compiled binaries) from language stats
 PublishedApp/* linguist-generated
-*.dll linguist-generated
 
-# Define C# as the primary language
+# Set C# as the primary language
 *.cs linguist-language=C#
 *.cshtml linguist-language=C#
 *.razor linguist-language=C#
+
+# Include Docker-related files
+Dockerfile linguist-language=Docker
+*.yml linguist-language=YAML
