@@ -1,5 +1,10 @@
-# Mark CSS files as linguist-generated to exclude them from language stats
+# Mark CSS and JavaScript files as linguist-generated to exclude them from language stats
 *.css linguist-generated
+*.js linguist-generated
 
 # Define C# as the primary language
 *.cs linguist-language=C#
+
+# Optionally, include ASP.NET Core Razor files
+*.cshtml linguist-language=C#
+*.razor linguist-language=C#
